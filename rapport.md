@@ -11,7 +11,7 @@ Les trois éléments les plus chronophages furent :
   - Trouver les commandes nécessaires pour notre travail (création de dossier, copie de fichier, etc.) 
   - Établir les bonnes façons d'appeler dynamiquement les commandes dans une arborescence de fichiers changeante
 
-Le programme proto a eu deux versions différentes. La première, alors que l'on s'affairait à simplement faire fonctionner le tout, appelait une multitudes de fichiers .bat qui exécutaient chaque opération sur le système de fichier, les appels à *git* et l'appel à Java pour faire l'appel au programme du TP1.  
+Le programme proto a eu deux versions différentes. La première, alors que l'on s'affairait à simplement faire fonctionner le tout, appelait une multitudes de fichiers .bat qui exécutaient chaque opération sur le système de fichier, les appels à *git* et l'appel à Java pour faire l'appel au [programme du TP1](https://github.com/TLOREM/tp1_qm_jp).  
 
 Bien que fonctionnelle, cette version nous semblait un peu farfelue, alors nous avons approfondi notre connaissance du module subprocess et trouvé comment faire les appels directement depuis le programmes principal en Python. 
 
