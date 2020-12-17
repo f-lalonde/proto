@@ -59,7 +59,7 @@ Par contre, en observant le graphique généré plus haut, on peut voir qu'il y 
 
 Une fois ces trois zones séparées, voici les données que nous trouvons : 
 
-**Spearman**                                              **Pearson**
+**Spearman**                                             **Pearson**
 ```
 Zone 1 : 
            n_classe    m_c_bc                         n_classe    m_c_bc               
