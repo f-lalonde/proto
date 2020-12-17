@@ -1,6 +1,8 @@
-# Description brève du travail accompli
+# Rapport
 
-## Tâche 1
+## Description brève du travail accompli
+
+### Tâche 1
 
 Créer le programme proto fut relativement simple, par rapport à notre expérience personnelle.  
 Les trois éléments les plus chronophages furent :
@@ -17,16 +19,21 @@ Bien que fonctionnelle, cette version nous semblait un peu farfelue, alors nous 
 
 Ainsi, la version finale du programme élimine les appels aux fichiers *batch scripting*, à une exception près (qui aurait probablement pu être également importée dans le logiciel).
 
-## Tâche 2
+### Tâche 2
 Cette tâche était plutôt simple! Nous faisons tout simplement l'exécution du programme du TP1 sur la version analysée du dépôt *git* voulu, puis nous importons *classes.csv* dans un *DataFrame* du module *pandas*, auquel on demande de calculer la médiane pour la colonne *Classe_BC*, et le nombre de classes, puis nous insérons ces données dans le nouveau fichier *.csv* aux côtés de l'identificateur de version. 
 
 Seules modifications : 
 - le programme du TP1 renvoyait parfois des classes "null", avec des données à 0 ou très près de 0. Cela indique que le programme du TP1 pourrait être raffiné. Pour l'instant, nous avons opté pour éliminer ces données de *classes.csv*. 
 - le calcul de *classe_BC* renvoyait la valeur *Infinity* si WMC = 0 pour une classe donnée. Nous avons modifié ces valeur pour des *NaN*, qui sont automatiquement ignorées par les calculs exécutés par *pandas*. 
 
-## Tâche 3
+### Tâche 3
+
+Une fois le nouveau fichier csv calculé (environ 2 heures pour 10% aléatoire de jFreeChart), on a importé les données dans un *DataFrame* de *pandas*. 
+
+### Bonus
+
+
+## Évaluation de l'hypothèse (Tâche 3)
+
 ***Hypothèse*** : *Pour les versions de jfreechart, il existe une corrélation entre les métriques n_classes et m_c_BC. Basez votre analyse sur l’hypothèse que leurs valeurs ne sont pas normalement distribuées.*
 
-
-
-## Bonus
