@@ -54,8 +54,9 @@ def analyse(version):
     # importe les valeurs dans un DataFrame de Pandas
     data = pd.read_csv("./temp/classes.csv", header=0, names=["chemin", "classe", "LOC", "CLOC", "DC", "WMC", "BC"])
 
-    # on s'assure que les -1 ne sont pas comptés (-1 lorsque WMC = 0)
-    data.BC.replace(-1, np.NaN)
+    # les données générées donnent parfois des classes "null", avec des valeurs dont on ne connait pas l'importance.
+    data.BC.replace(" Infinity", np.NaN)
+    data.drop_duplicates("classe", False, True)
 
     # calcul nombre de classe, et médiane des valeurs BC
     class_count = data.classe.count()
