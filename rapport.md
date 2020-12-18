@@ -53,9 +53,9 @@ print(data.corr(method = 'spearman')):      print(data.corr(method = 'pearson'))
 
 Par contre, en observant le graphique généré plus haut, on peut voir qu'il y a trois, voire quatre grandes périodes sur lesquelles jfreechart a été développé, séparés par de grands moments sans *commits*. Nous avons séparé ces trois zones (la quatrième zone n'ayant que très peu de points de données, nous l'avons laissée avec la 3e) :
 
-- <span style="color:orange">**Zone 1**</span> : 237 points de données, allant de 2007-07-06 à 2010-07-14
-- <span style="color:green">**Zone 2**</span> : 90 points de données, allant de 2011-10-06 à 2015-09-09
-- <span style="color:yellow">**Zone 3**</span> : 75 points de données, allant de 2016-01-16 à 2020-10-31
+- Zone 1 : 237 points de données, allant de 2007-07-06 à 2010-07-14
+- Zone 2 : 88 points de données, allant de 2011-10-06 à 2014-07-29
+- Zone 3 : 777 points de données, allant de 2015-09-06 à 2020-10-31
 
 ![graphique à deux axes y avec zones colorées: n_classe par rapport au temps ; m_c_bc par rapport au temps](https://github.com/f-lalonde/proto/blob/main/analyses/classe%20n%20vs%20bc%20zones.png)
 
