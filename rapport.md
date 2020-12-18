@@ -36,9 +36,6 @@ Nous avons tout d'abord tracé un graphique sur lequel on comparait l'évolution
 
 Nous avons ensuite utilisé les outils à notre disposition pour faire l'évaluation de l'hypothèse, dans la prochaine section.
 
-### Bonus
-
-
 ## Évaluation de l'hypothèse (Tâche 3)
 
 ***Hypothèse*** : *Pour les versions de jfreechart, il existe une corrélation entre les métriques n_classes et m_c_BC. Basez votre analyse sur l’hypothèse que leurs valeurs ne sont pas normalement distribuées.*
