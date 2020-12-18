@@ -7,24 +7,39 @@ import sys
 import pandas as pd
 import numpy as np
 
-print("\nBienvenu sur proto (version FL-TM). Veuillez choisir une des 3 options suivantes :\n")
+options = -1
 
-while True:
-    try:
-        options = int(input("1. Analyser le plus récent commit d'un git\n"
-                            "2. Analyser un échantillon aléatoire de 10% des commits d'un git (peut être très long)\n"
-                            "3. Quitter le logiciel.\n"))
-        if not (options == 1 or options == 2 or options == 3):
-            raise Exception
-        break
+if len(sys.argv) < 2:
 
-    except:
-        print("Ceci n'est pas une option valide. Veuillez appuyez sur 1, 2 ou 3, selon votre choix :\n")
+    print("\nBienvenu sur proto (version FL-TM). Veuillez choisir une des 3 options suivantes :\n")
 
-if options == 3:
-    sys.exit("Processus terminé à la demande de l'utilisateur")
+    while True:
+        try:
+            options = int(input(
+                "1. Analyser le plus récent commit d'un git\n"
+                "2. Analyser un échantillon aléatoire de 10% des commits d'un git (peut être très long)\n"
+                "3. Quitter le logiciel.\n"))
 
-git_address = input("Veuillez copier l'adresse du git à analyser : ")
+            if not (options == 1 or options == 2 or options == 3):
+                raise Exception
+            break
+
+        except:
+            print("Ceci n'est pas une option valide. Veuillez appuyez sur 1, 2 ou 3, selon votre choix :\n")
+
+    if options == 3:
+        sys.exit("Processus terminé à la demande de l'utilisateur")
+
+    git_address = input("Veuillez copier l'adresse du git à analyser : ")
+
+else:
+    if len(sys.argv) == 3:
+        options = int(sys.argv[2])
+    else:
+        options = 1
+
+    git_address = sys.argv[1]
+
 print("\nMerci. On se met au boulot! Veuillez patienter...")
 
 name = git_address.split("/")[-1].split(".git")[0]

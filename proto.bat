@@ -1,3 +1,3 @@
 cd dist\proto\
-
-.\proto.exe
+echo %2
+.\proto.exe %1 %2
