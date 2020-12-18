@@ -1,3 +1,8 @@
 cd dist\proto\
-echo %2
-.\proto.exe %1 %2
+@echo off
+set P=1
+IF "%~2" == "" GOTO Vide
+set P=2
+:Vide
+.\proto.exe %1 %P%
+
