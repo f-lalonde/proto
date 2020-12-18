@@ -53,9 +53,9 @@ print(data.corr(method = 'spearman')):      print(data.corr(method = 'pearson'))
 
 Par contre, en observant le graphique généré plus haut, on peut voir qu'il y a trois, voire quatre grandes périodes sur lesquelles jfreechart a été développé, séparés par de grands moments sans *commits*. Nous avons séparé ces trois zones (la quatrième zone n'ayant que très peu de points de données, nous l'avons laissée avec la 3e) :
 
-- Zone 1 : 237 points de données, allant de 2007-07-06 à 2010-07-14
-- Zone 2 : 88 points de données, allant de 2011-10-06 à 2014-07-29
-- Zone 3 : 777 points de données, allant de 2015-09-06 à 2020-10-31
+- Zone 1 : 238 points de données, allant de 2007-07-06 à 2010-07-14
+- Zone 2 : 89 points de données, allant de 2011-10-06 à 2014-07-29
+- Zone 3 : 77 points de données, allant de 2015-09-06 à 2020-10-31
 
 ![graphique à deux axes y avec zones colorées: n_classe par rapport au temps ; m_c_bc par rapport au temps](https://github.com/f-lalonde/proto/blob/main/analyses/classe%20n%20vs%20bc%20zones.png)
 
@@ -70,14 +70,19 @@ m_c_bc   -0.917197  1.000000                m_c_bc   -0.799509  1.000000
 
 Zone 2 : 
            n_classe    m_c_bc                         n_classe    m_c_bc
-n_classe  1.000000  0.045932                n_classe  1.000000 -0.089756
-m_c_bc    0.045932  1.000000                m_c_bc   -0.089756  1.000000 
+n_classe  1.000000  0.010085                n_classe  1.000000 -0.111164
+m_c_bc    0.010085  1.000000                m_c_bc   -0.111164  1.000000 
 
 Zone 3 : 
            n_classe    m_c_bc                         n_classe    m_c_bc
-n_classe  1.000000  0.808461                n_classe  1.000000  0.901997
-m_c_bc    0.808461  1.000000                m_c_bc    0.901997  1.000000 
+n_classe  1.000000  0.77978                 n_classe  1.000000  0.894298
+m_c_bc    0.77978   1.000000                m_c_bc    0.894298  1.000000 
 ```
 
 C'est-à-dire que l'on semble avoir une très forte corrélation entre les valeurs de n_classe et m_c_bc, mis à part durant les *commits* se trouvant en zone 2.  
 Il serait avantageux de vérifier ce qu'il s'est passé entre ces dates dans le cycle de vie du logiciel, ou encore s'ils s'agissent de *commits* provenant d'un développeur en particulier. 
+
+**Donc, que peut-on dire de l'hypothèse?**  
+
+En gros, oui, il semble bien y avoir une corrélation. Par contre, la force de cette corrélation n'est pas nécessairement la même pour n'importe quel code ; il y a vraisemblablement d'autres variables à prendre en compte. Cependant, si on peut identifier et controller ces valeurs et détecter comment elles influent sur la corrélation entre le nombre de classes et le nombre de classes bien commentées, alors on pourrait vraisemblablement utiliser cette métrique afin d'analyser du code et vérifier s'il répond aux exigeances du programme qui est réalisé. 
+
