@@ -33,6 +33,9 @@ Proto fait l'analyse de projet en Java. Il prend en entrée un lien vers un dép
 
 ## Instructions :
 
+Il y a deux façon d'éxécuter le programme : 
+
+### Mode interactif : 
 - Exécuter "proto.bat"
 - Suivre les directives à l'écran :
   - Appuyer sur 1 pour une analyse du dernier commit seulement sur un dépot de type git
@@ -43,6 +46,20 @@ Proto fait l'analyse de projet en Java. Il prend en entrée un lien vers un dép
 - Une fois terminé, le programme va générer un fichier .csv contenant les données calculées. Le chemin d'accès sera également imprimé à l'écran, au besoin.
 
 Simple comme ça!
+
+### Par ligne de commande
+L'appel se fait ainsi :
+```.\proto.bat <adresse du git> <optionnel>```
+
+L'appel sans argument <optionnel> produit le même résultat que l'option 1 en mode interactif (i.e. analyse du dernier commit seulement sur le dépot spécifié) :
+```.\proto.bat https://github.com/f-lalonde/proto.git```
+      
+L'appel avec un (ou des) arguments supplémentaires produit le même résultat que l'option 2 en mode interacti (i.e. analyse d'un échantillon aléatoire de 10% des commits du le dépot spécifié, ce qui peut être long) :
+```.\proto.bat https://github.com/f-lalonde/proto.git 2```
+```.\proto.bat https://github.com/f-lalonde/proto.git patate```
+```.\proto.bat https://github.com/f-lalonde/proto.git ah comme la neige a neigée```
+
+Les trois derniers exemples produiront le même résultat.
 
 ## TROUBLESHOOTING :
 
